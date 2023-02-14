@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 1.5rem;
+            font-weight: bolder;
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+            "cabeça cabeça"
+            "corpo seção"
+            "rodapé rodapé";
+            grid-template-rows: 60px 1fr 60px;
+            grid-template-columns: 1fr 300px;
+        }
+        header{
+            background-color: red;
+            grid-area: cabeça;
+        }
+        main{
+            background-color: aqua;
+            grid-area: corpo;
+        }
+        section{
+            background-color: blue;
+            grid-area: seção;
+        }
+        footer{
+            background-color: yellow;
+            grid-area: rodapé;
+        }
+    </style>
+</head>
+<body>
+    <header>Cabeçalho</header>
+    <main>Corpo</main>
+    <section>Seção</section>
+    <footer>Rodapé</footer>
+    <!-- Este é o GRID. Uma fomma de construir páginas responsivas. Ele é usado dentro do atributo "display: grid;", e SEMPRE dentro de uma tag pai, para alterar as caracteristicas dos blocos de tag filho dentro dessa tag pai. 
+        grid-template-areas: 
+        "cabeça cabeça"
+        "corpo seção"
+        "rodapé rodapé";
+    Este trexo representa as áreas a serem editadas, cada aspas representa uma linha, ou seja, são 3 linhas. E os ítens dentro das aspas são as colunas, ou seja, duas colunas.
+        grid-template-rows: 60px 1fr 60px;
+    Esse trexo as linhas que serão editadas, como são 3 linhas, a primeira terá 60px, a segunda 1fr(isso representa uma fração, uma lina flexivel), e a terceira 60px também.
+        grid-template-columns: 1fr 300px;
+    Aqui é a mesma coisa, só que edita as colunas. 
+    A vantágem do grid é editar blocos na vertical e horizontal ao mesmo tempo, enquanto o "display: flex" edita somente na vertical ou somente na horizontal -->
+</body>
+</html>
